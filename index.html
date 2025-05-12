@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Theme Electron App</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="sidebar">
+      <div class="explorer-header">
+        <span class="explorer-header-title">EXPLORER</span>
+        <div class="explorer-actions">
+          <button class="icon-button">...</button>
+        </div>
+      </div>
+      <div id="file-explorer" class="file-explorer">
+        <!-- File tree will be dynamically generated here -->
+        <div class="placeholder-message">Select a folder to view its contents</div>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <div class="container">
+        <h1>Dark Theme Electron App</h1>
+        <p>Welcome to your new dark-themed Electron application!</p>
+        
+        <div class="action-panel">
+          <button id="select-folder-btn" class="btn">Select Folder</button>
+          <div id="selected-folder-path">No folder selected</div>
+        </div>
+        
+        <div class="info-box">
+          <p>We are using:</p>
+          <ul>
+            <li>Chrome <span id="chrome-version"></span></li>
+            <li>Node.js <span id="node-version"></span></li>
+            <li>Electron <span id="electron-version"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html>
